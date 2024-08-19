@@ -1,7 +1,5 @@
 # Overview
 
-For an initial introduction on how to integrate the true[X] SDK into a web application, please refer to the [Getting Started](./GETTING_STARTED.md) guide.
-
 This project contains sample source code that demonstrates an example integration of the use of Truex ads as SIMID interactive ads in conjunction with Google Ad Manager, using the IMA SDK. 
 
 That is, demonstrating the use of Secure Interactive Media Interface Definition. SIMID is described here:
