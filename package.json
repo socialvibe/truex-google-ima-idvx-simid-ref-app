@@ -49,10 +49,8 @@
         "webpack-serve": "^1.0.4"
     },
     "dependencies": {
-        "@truex/ad-renderer": "1.12.5",
-        "adm-zip": "^0.5.1",
         "core-js": "^3.6.4",
-        "truex-shared": "https://github.com/socialvibe/truex-shared-js.git#1.10.3",
+        "truex-shared": "https://github.com/socialvibe/truex-shared-js.git#1.11.4",
         "uuid": "^3.4.0",
         "video.js": "^7.15.4",
         "videojs-contrib-ads": "^6.9.0",

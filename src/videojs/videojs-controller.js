@@ -4,8 +4,6 @@ import '../components/video-controller.scss';
 import playSvg from '../assets/play-button.svg';
 import pauseSvg from '../assets/pause-button.svg';
 
-import { InteractiveAd } from "../components/interactive-ad";
-
 import videojs from 'video.js';
 import 'videojs-contrib-ads';
 import 'videojs-ima';
@@ -246,8 +244,9 @@ export class VideoJSController {
                 this.showLoadingSpinner(false);
                 this.hideControlBar();
                 this.refresh();
-
-                this.startInteractiveAd();
+                this.showAdContainer(true);
+                this.showPlayer(true);
+                if (this.adsManager) this.adsManager.resume();
                 break;
 
             case google.ima.AdEvent.Type.SKIPPED:
@@ -255,14 +254,6 @@ export class VideoJSController {
 
             case google.ima.AdEvent.Type.AD_PROGRESS:
                 this.currentAdProgress = event.getAdData();
-
-                // Progressing thru the placeholder video means we should be done with it.
-                // NOTE: Skip no longer works as of Dev 2023, version 3.607.0
-                // See: https://groups.google.com/g/ima-sdk/c/ky-Q_pUXrIA
-                // if (canSkip && this.isShowingTruexAd()) {
-                //     this.adsManager.skip();
-                // }
-
                 this.refresh();
                 break;
 
@@ -522,58 +513,6 @@ export class VideoJSController {
     }
 
     // Implements a key true[X] integration point, i.e. how to recognize a true[X] ad in the ad feed.
-    startInteractiveAd() {
-        // For true[X] IMA integration, the first ad in an ad break points to the interactive ad,
-        // everything else are the fallback ad videos, or else non-truex ad videos.
-        // So anything not an interactive ad we just let play.
-        if (!this.isShowingTruexAd()) {
-            this.showAdContainer(true);
-            this.showPlayer(true);
-            if (this.adsManager) this.adsManager.resume();
-            return;
-        }
-
-        const ad = this.currentAd;
-        const adPod = ad.getAdPodInfo();
-
-        const adParams = JSON.parse(ad.getTraffickingParametersString());
-        var vastConfigUrl = adParams && adParams.vast_config_url;
-        vastConfigUrl = vastConfigUrl && vastConfigUrl.trim();
-        if (!vastConfigUrl) return;
-        if (!vastConfigUrl.startsWith('http')) {
-            vastConfigUrl = 'https://' + vastConfigUrl;
-        }
-
-        // A real integration would have stream and user id macros already substituted in from the VAST server.
-        // We do it now to work around ad usage capping due to static ids.
-        // NOTE: this is needed only let ads be reliably available for demo purposes. A production version would
-        // use the vast config urls from the VAST descriptor as is.
-        vastConfigUrl = vastConfigUrl.replace('#{stream-id}', this.videoStream.id);
-        vastConfigUrl = vastConfigUrl.replace('#{user-id}', this.currentUserId);
-
-        console.log(`truex ad started at ${timeLabelOf(adPod.getTimeOffset())}:\n${vastConfigUrl}`);
-
-        // Ensure the entire player is no longer visible.
-        this.showAdContainer(false);
-        this.showPlayer(false);
-        this.showLoadingSpinner(true);
-        this.hideControlBar();
-        this.pause();
-
-        // NOTE: Skip no longer works as of Dev 2023, version 3.607.0
-        // See: https://groups.google.com/g/ima-sdk/c/ky-Q_pUXrIA
-        // As such, we try to force the skip directly on the underlying ad video player as a work around.
-        var adVideo = this.videoOwner.querySelector('.ima-ad-container video');
-        if (adVideo && adVideo.duration > 0) {
-            adVideo.currentTime = adVideo.duration;
-        }
-
-        // Start an interactive ad.
-        const interactiveAd = new InteractiveAd(vastConfigUrl, this);
-        interactiveAd.start();
-
-        return true; // ad started
-    }
 
     onVideoStarted() {
         if (!this.player) return;
