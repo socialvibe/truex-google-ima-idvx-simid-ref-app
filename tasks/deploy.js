@@ -9,7 +9,7 @@ const { purgeFastlyService }  = require("truex-shared/src/deploy/purge-fastly-se
 const deploy = () => {
     const bucket = "ctv.truex.com";
     const branch = process.env.TRAVIS_BRANCH;
-    const prefix = 'web/ref-app-IMA-CSAI/' + branch;
+    const prefix = 'web/ref-app-IMA-SIMID/' + branch;
 
     const PR = process.env.TRAVIS_PULL_REQUEST;
     const isPR = PR != "false";

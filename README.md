@@ -2,11 +2,15 @@
 
 For an initial introduction on how to integrate the true[X] SDK into a web application, please refer to the [Getting Started](./GETTING_STARTED.md) guide.
 
-This project contains sample source code that demonstrates an example integration of true[X]'s CTV Web ad renderer with the Google Ad Manager, using the IMA SDK. This further exemplifies the needed logic to manage true[X] opt-in flows (choice cards) as fully stitched into the video stream, when true[X] ads are encountered in the ad feed. 
+This project contains sample source code that demonstrates an example integration of the use of Truex ads as SIMID interactive ads in conjunction with Google Ad Manager, using the IMA SDK. 
 
-Google IMA Documentation can be found [here|https://developers.google.com/interactive-media-ads].
+That is, demonstrating the use of Secure Interactive Media Interface Definition. SIMID is described here:
+* [Intro spec](https://iabtechlab.com/simid/)
+* [Official spec](https://interactiveadvertisingbureau.github.io/SIMID/)
 
-For a more detailed true[X] integration guide, please refer to the [CTV Web Integration documentation](https://github.com/socialvibe/truex-ctv-web-integration) on github.com.
+There is no specific client integration needed beyond having access to VAST xml ad feed, that contains the interactive ad's `<MediaFile>` and `<InteractiveCreativeFile>` elements.
+
+This can be seen in the [sampl-ad-playlist.xml](src/data/sample-ad-playlist.xml) file.
 
 # Implementation Details
 
@@ -16,9 +20,6 @@ The bulk of the code represents a more or less canonical media app that breaks d
 * [index.html](./src/index.html), [main.js](./src/main.js): main application page and app logic, presenting "typical" landing content playback pages.
 * video controller classes, i.e. [simple-video-controller.js](./src/simple/simple-video-controller.js) and [videojs-controller.js](./src/videojs/videojs-controller.js): player controller for play/pause/seek support, and ad feed integration and ad playback.
   * A key true[X] integration point is in the `startInterativeAd()` method, which decides when a true[X] ad is recognized in the ad feed, and thus to either display it or fallback to the regular ad videos in the ad break.
-* [interactive-ad.js](./src/components/interactive-ad.js): true[X] ad component, creates and starts the `TruexAdRenderer` instance to display the true[X] interactive ad.
-  * This is the main integration point to the true[X] SDK.
-  * When the true[X] ad completes, one either skips the ad break to resumne content playback (via `videoController.skipAdBreak()`) or fallback to playing the remaining ad videos in the ad break (via `videoController.resumeAdPlayback()`), depending on whether or not the user earned the the "interaction credit" within the true[X] ad.
 
 The main video is defined by the [video-streams.json](./src/data/video-streams.json) file. The ads are canned, and are defined in the [sample-ad-playlist.xml](./src/data/sample-ad-playlist.xml) file. In this sample application, a preroll and a midroll ad breaks are defined.
 
