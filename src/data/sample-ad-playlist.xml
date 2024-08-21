@@ -3,8 +3,7 @@
   <vmap:AdBreak timeOffset="start" breakType="linear" breakId="preroll">
     <vmap:AdSource id="preroll-ad-1" allowMultipleAds="true" followRedirects="true">
       <vmap:VASTAdData>
-        <VAST xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vast.xsd"
-            version="4.1">
+        <VAST version="4.1" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.iab.com/VAST">
           <Ad id="truex-preroll" sequence="1">
             <InLine>
               <AdSystem>trueX</AdSystem>
@@ -53,8 +52,7 @@
   <vmap:AdBreak timeOffset="00:08:05.000" breakType="linear" breakId="midroll-1">
     <vmap:AdSource id="midroll-1-ads" allowMultipleAds="true" followRedirects="true">
       <vmap:VASTAdData>
-        <VAST xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vast.xsd"
-            version="3.0">
+        <VAST version="4.1" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.iab.com/VAST">
           <Ad id="truex-midroll" sequence="1">
             <InLine>
               <AdSystem>trueX</AdSystem>
