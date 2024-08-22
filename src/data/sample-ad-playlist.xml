@@ -12,15 +12,13 @@
                 <Creative id="truex-preroll" sequence="1">
                   <Linear>
                     <Duration>00:00:30</Duration>
-                    <AdParameters>
-                      <![CDATA[ {"vast_config_url":"get.truex.com/72904fe382372efcdcea6314aa1d7a37db6051b9/vast/config?dimension_1=sample-video&dimension_2=0&dimension_3=sample-video&dimension_4=1234&dimension_5=evergreen&stream_position=preroll&stream_id=#{stream-id}&network_user_id=#{user-id}"}]]>
-                    </AdParameters>
+                    <AdParameters></AdParameters>
                     <MediaFiles>
                       <MediaFile delivery="progressive" width="1280" height="720" type="video/mp4" scalable="true" maintainAspectRatio="true">
                         <![CDATA[https://media.truex.com/video_assets/2018-09-27/43aa3bb4-6389-4bdc-bd60-839f78aea8e1_large.mp4]]>
                       </MediaFile>
                       <InteractiveCreativeFile type="text/html" apiFramework="SIMID" variableDuration="true">
-                        <![CDATA[https://qa-media.truex.com/container/3.x/current/idvx-simid.html#creative_json_url=https%3A%2F%2Fqa-ee.truex.com%2Fstudio%2Fdrafts%2F7446%2Fconfig_json]]>
+                        <![CDATA[https://qa-media.truex.com/container/3.x/current/idvx-simid.html#direct=true&partner_config_hash=a360056fc79d6cb322483043ef8bc31d40dc3994&campaign_id=4349&creative_id=8245&network_user_id=test-user-123]]>
                       </InteractiveCreativeFile>
                     </MediaFiles>
                   </Linear>
@@ -61,15 +59,13 @@
                 <Creative id="truex-midroll" sequence="1">
                   <Linear>
                     <Duration>00:00:30</Duration>
-                    <AdParameters>
-                      <![CDATA[ {"vast_config_url":"get.truex.com/72904fe382372efcdcea6314aa1d7a37db6051b9/vast/config?dimension_1=sample-video&dimension_2=1&dimension_3=sample-video&dimension_4=5678&dimension_5=evergreen&stream_position=midroll&stream_id=#{stream-id}&network_user_id=#{user-id}"}]]>
-                    </AdParameters>
+                    <AdParameters></AdParameters>
                     <MediaFiles>
                       <MediaFile delivery="progressive" width="1280" height="720" type="video/mp4" scalable="true" maintainAspectRatio="true">
                         <![CDATA[https://media.truex.com/m/video/truexloadingplaceholder-30s.mp4]]>
                       </MediaFile>
                       <InteractiveCreativeFile type="text/html" apiFramework="SIMID" variableDuration="true">
-                        <![CDATA[https://qa-media.truex.com/container/3.x/current/idvx-simid-placeholder.html#bid_info=0-kpUeZ6yUYgT-3hiA8sM9eNKCNcbk1GwdVNvnmYURKo2XWDoR24GLXi8jgiTX28up5nmQbQhWEYkoZFSvUoAyKCmPiPa6gsbY7Tbo7fEy91tXAYx2tx6jWB6uiapP7v8eQGDsrUwEWXxRR8qnoWscujVc4rxGfSeVKkK2EkPxVFpesnhizAAinugB2p5dHoaSKah6ufGTyJvDhu2F7F2A6ArAGsEf2kj9DPHhdfQ4SvV7zJtCioRVxgidGX1BUcsy1HcvEZQ9FELNPJPgUS1&campaign_id=4349&creative_id=8245&network_user_id=52b8adbe-fcd9-4883-adeb-43ecdec096a1&placement_hash=15c7f5269a09bd8c5007ba98263571dd80c458e5&vault=0-3hgdkUfTRVk-3chQsPiWb6jYB53nEMBqhWHkFSUA5drXmW2eiRyj6WAook4fkSsbKF2PrtkR3kApqPm55Q8rQrtoAvSnLfGKL9FE7dBgZLy3cLzXYvnztnuCTQ]]>
+                        <![CDATA[https://qa-media.truex.com/container/3.x/current/idvx-simid-placeholder.html#direct=true&partner_config_hash=a360056fc79d6cb322483043ef8bc31d40dc3994&campaign_id=4349&creative_id=8245&network_user_id=test-user-123]]>
                       </InteractiveCreativeFile>
                     </MediaFiles>
                   </Linear>
