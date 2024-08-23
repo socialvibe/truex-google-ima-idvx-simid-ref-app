@@ -18,7 +18,7 @@
                         <![CDATA[https://media.truex.com/video_assets/2018-09-27/43aa3bb4-6389-4bdc-bd60-839f78aea8e1_large.mp4]]>
                       </MediaFile>
                       <InteractiveCreativeFile type="text/html" apiFramework="SIMID" variableDuration="true">
-                        <![CDATA[https://qa-media.truex.com/container/3.x/current/idvx-simid.html#direct=true&partner_config_hash=a360056fc79d6cb322483043ef8bc31d40dc3994&campaign_id=4349&creative_id=8245&network_user_id=test-user-123]]>
+                        <![CDATA[https://qa-media.truex.com/container/3.x/current/idvx-simid.html#direct%3Dtrue%26campaign_id%3D3690%26creative_id%3D9574%26partner_config_hash%3Da360056fc79d6cb322483043ef8bc31d40dc3994%26network_user_id%3Dtst-user-123]]>
                       </InteractiveCreativeFile>
                     </MediaFiles>
                   </Linear>
