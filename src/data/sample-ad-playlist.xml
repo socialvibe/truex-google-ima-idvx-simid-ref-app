@@ -3,8 +3,7 @@
   <vmap:AdBreak timeOffset="start" breakType="linear" breakId="preroll">
     <vmap:AdSource id="preroll-ad-1" allowMultipleAds="true" followRedirects="true">
       <vmap:VASTAdData>
-        <VAST xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vast.xsd"
-            version="3.0">
+        <VAST version="4.1" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.iab.com/VAST">
           <Ad id="truex-preroll" sequence="1">
             <InLine>
               <AdSystem>trueX</AdSystem>
@@ -13,12 +12,14 @@
                 <Creative id="truex-preroll" sequence="1">
                   <Linear>
                     <Duration>00:00:30</Duration>
-                    <AdParameters>
-                      <![CDATA[ {"vast_config_url":"get.truex.com/72904fe382372efcdcea6314aa1d7a37db6051b9/vast/config?dimension_1=sample-video&dimension_2=0&dimension_3=sample-video&dimension_4=1234&dimension_5=evergreen&stream_position=preroll&stream_id=#{stream-id}&network_user_id=#{user-id}"}]]>
-                    </AdParameters>
+                    <AdParameters></AdParameters>
                     <MediaFiles>
                       <MediaFile delivery="progressive" width="1280" height="720" type="video/mp4" scalable="true" maintainAspectRatio="true">
-                        <![CDATA[https://media.truex.com/m/video/truexloadingplaceholder-30s.mp4]]></MediaFile>
+                        <![CDATA[https://media.truex.com/video_assets/2018-09-27/43aa3bb4-6389-4bdc-bd60-839f78aea8e1_large.mp4]]>
+                      </MediaFile>
+                      <InteractiveCreativeFile type="text/html" apiFramework="SIMID" variableDuration="true">
+                        <![CDATA[https://qa-media.truex.com/container/3.x/current/idvx-simid.html#direct%3Dtrue%26campaign_id%3D3690%26creative_id%3D9574%26partner_config_hash%3Da360056fc79d6cb322483043ef8bc31d40dc3994%26network_user_id%3Dtst-user-123]]>
+                      </InteractiveCreativeFile>
                     </MediaFiles>
                   </Linear>
                 </Creative>
@@ -49,8 +50,7 @@
   <vmap:AdBreak timeOffset="00:08:05.000" breakType="linear" breakId="midroll-1">
     <vmap:AdSource id="midroll-1-ads" allowMultipleAds="true" followRedirects="true">
       <vmap:VASTAdData>
-        <VAST xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vast.xsd"
-            version="3.0">
+        <VAST version="4.1" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.iab.com/VAST">
           <Ad id="truex-midroll" sequence="1">
             <InLine>
               <AdSystem>trueX</AdSystem>
@@ -59,12 +59,14 @@
                 <Creative id="truex-midroll" sequence="1">
                   <Linear>
                     <Duration>00:00:30</Duration>
-                    <AdParameters>
-                      <![CDATA[ {"vast_config_url":"get.truex.com/72904fe382372efcdcea6314aa1d7a37db6051b9/vast/config?dimension_1=sample-video&dimension_2=1&dimension_3=sample-video&dimension_4=5678&dimension_5=evergreen&stream_position=midroll&stream_id=#{stream-id}&network_user_id=#{user-id}"}]]>
-                    </AdParameters>
+                    <AdParameters></AdParameters>
                     <MediaFiles>
                       <MediaFile delivery="progressive" width="1280" height="720" type="video/mp4" scalable="true" maintainAspectRatio="true">
-                        <![CDATA[https://media.truex.com/m/video/truexloadingplaceholder-30s.mp4]]></MediaFile>
+                        <![CDATA[https://media.truex.com/m/video/truexloadingplaceholder-30s.mp4]]>
+                      </MediaFile>
+                      <InteractiveCreativeFile type="text/html" apiFramework="SIMID" variableDuration="true">
+                        <![CDATA[https://qa-media.truex.com/container/3.x/current/idvx-simid-placeholder.html#direct=true&partner_config_hash=a360056fc79d6cb322483043ef8bc31d40dc3994&campaign_id=4349&creative_id=8245&network_user_id=test-user-123]]>
+                      </InteractiveCreativeFile>
                     </MediaFiles>
                   </Linear>
                 </Creative>
