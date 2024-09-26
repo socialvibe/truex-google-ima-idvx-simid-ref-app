@@ -15,10 +15,10 @@
                     <AdParameters></AdParameters>
                     <MediaFiles>
                       <MediaFile delivery="progressive" width="1280" height="720" type="video/mp4" scalable="true" maintainAspectRatio="true">
-                        <![CDATA[https://media.truex.com/video_assets/2018-09-27/43aa3bb4-6389-4bdc-bd60-839f78aea8e1_large.mp4]]>
+                        <![CDATA[https://media.truex.com/m/video/truexloadingplaceholder-30s.mp4]]>
                       </MediaFile>
                       <InteractiveCreativeFile type="text/html" apiFramework="SIMID" variableDuration="true">
-                        <![CDATA[https://qa-media.truex.com/container/3.x/current/idvx-simid.html#direct=true&campaign_id=10004&creative_id=9574&partner_config_hash=d66b670fcab1275e727882b49149ae132c7d0212&network_user_id=some-user-2&user_agent=Android]]>
+                        <![CDATA[https://qa-media.truex.com/container/3.x/current/idvx-simid-placeholder.html#direct=true&campaign_id=10004&creative_id=9573&partner_config_hash=d66b670fcab1275e727882b49149ae132c7d0212&network_user_id=some-user-1&user_agent=Android]]>
                       </InteractiveCreativeFile>
                     </MediaFiles>
                   </Linear>
@@ -48,6 +48,70 @@
     </vmap:AdSource>
   </vmap:AdBreak>
   <vmap:AdBreak timeOffset="00:08:05.000" breakType="linear" breakId="midroll-1">
+    <vmap:AdSource id="midroll-1-ads" allowMultipleAds="true" followRedirects="true">
+      <vmap:VASTAdData>
+        <VAST version="4.1" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.iab.com/VAST">
+          <Ad id="truex-midroll" sequence="1">
+            <InLine>
+              <AdSystem>trueX</AdSystem>
+              <AdTitle>TrueX Interactive Midroll</AdTitle>
+              <Creatives>
+                <Creative id="truex-midroll" sequence="1">
+                  <Linear>
+                    <Duration>00:00:30</Duration>
+                    <AdParameters></AdParameters>
+                    <MediaFiles>
+                      <MediaFile delivery="progressive" width="1280" height="720" type="video/mp4" scalable="true" maintainAspectRatio="true">
+                        <![CDATA[https://media.truex.com/video_assets/2018-09-27/43aa3bb4-6389-4bdc-bd60-839f78aea8e1_large.mp4]]>
+                      </MediaFile>
+                      <InteractiveCreativeFile type="text/html" apiFramework="SIMID" variableDuration="true">
+                        <![CDATA[https://qa-media.truex.com/container/3.x/current/idvx-simid.html#direct=true&campaign_id=10004&creative_id=9574&partner_config_hash=d66b670fcab1275e727882b49149ae132c7d0212&network_user_id=some-user-2&user_agent=Android]]>
+                      </InteractiveCreativeFile>
+                    </MediaFiles>
+                  </Linear>
+                </Creative>
+              </Creatives>
+            </InLine>
+          </Ad>
+          <Ad id="airline-midroll" sequence="2">
+            <InLine>
+              <AdSystem>GDFP</AdSystem>
+              <AdTitle>Airline Midroll</AdTitle>
+              <Creatives>
+                <Creative id="airline-midroll" sequence="2">
+                  <Linear>
+                    <Duration>00:00:30</Duration>
+                    <MediaFiles>
+                      <MediaFile delivery="progressive" width="1280" height="720" type="video/mp4" scalable="true" maintainAspectRatio="true">
+                        <![CDATA[https://ctv.truex.com/assets/airline-720p.mp4]]></MediaFile>
+                    </MediaFiles>
+                  </Linear>
+                </Creative>
+              </Creatives>
+            </InLine>
+          </Ad>
+          <Ad id="pets-midroll" sequence="3">
+            <InLine>
+              <AdSystem>GDFP</AdSystem>
+              <AdTitle>Pets Midroll</AdTitle>
+              <Creatives>
+                <Creative id="pets-midroll" sequence="3">
+                  <Linear>
+                    <Duration>00:00:30</Duration>
+                    <MediaFiles>
+                      <MediaFile delivery="progressive" width="1280" height="720" type="video/mp4" scalable="true" maintainAspectRatio="true">
+                        <![CDATA[https://ctv.truex.com/assets/petcare-720p.mp4]]></MediaFile>
+                    </MediaFiles>
+                  </Linear>
+                </Creative>
+              </Creatives>
+            </InLine>
+          </Ad>
+        </VAST>
+      </vmap:VASTAdData>
+    </vmap:AdSource>
+  </vmap:AdBreak>
+  <vmap:AdBreak timeOffset="00:14:0.000" breakType="linear" breakId="midroll-2">
     <vmap:AdSource id="midroll-1-ads" allowMultipleAds="true" followRedirects="true">
       <vmap:VASTAdData>
         <VAST version="4.1" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.iab.com/VAST">

@@ -50,7 +50,7 @@
     },
     "dependencies": {
         "core-js": "^3.6.4",
-        "truex-shared": "https://github.com/socialvibe/truex-shared-js.git#1.11.4",
+        "truex-shared": "https://github.com/socialvibe/truex-shared-js.git#1.11.5",
         "uuid": "^3.4.0",
         "video.js": "^7.15.4",
         "videojs-contrib-ads": "^6.9.0",
