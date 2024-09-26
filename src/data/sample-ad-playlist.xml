@@ -15,10 +15,10 @@
                     <AdParameters></AdParameters>
                     <MediaFiles>
                       <MediaFile delivery="progressive" width="1280" height="720" type="video/mp4" scalable="true" maintainAspectRatio="true">
-                        <![CDATA[https://media.truex.com/video_assets/2018-09-27/43aa3bb4-6389-4bdc-bd60-839f78aea8e1_large.mp4]]>
+                        <![CDATA[https://media.truex.com/m/video/truexloadingplaceholder-30s.mp4]]>
                       </MediaFile>
                       <InteractiveCreativeFile type="text/html" apiFramework="SIMID" variableDuration="true">
-                        <![CDATA[https://qa-media.truex.com/container/3.x/current/idvx-simid.html#direct=true&campaign_id=10004&creative_id=9574&partner_config_hash=d66b670fcab1275e727882b49149ae132c7d0212&network_user_id=some-user-2&user_agent=Android]]>
+                        <![CDATA[https://qa-media.truex.com/container/3.x/current/idvx-simid-placeholder.html#direct=true&campaign_id=10004&creative_id=8245&partner_config_hash=e5b97758c66fa13d0aa699058672719140333098&network_user_id=some-user-2]]>
                       </InteractiveCreativeFile>
                     </MediaFiles>
                   </Linear>
@@ -62,10 +62,10 @@
                     <AdParameters></AdParameters>
                     <MediaFiles>
                       <MediaFile delivery="progressive" width="1280" height="720" type="video/mp4" scalable="true" maintainAspectRatio="true">
-                        <![CDATA[https://media.truex.com/m/video/truexloadingplaceholder-30s.mp4]]>
+                        <![CDATA[https://media.truex.com/video_assets/2018-09-27/43aa3bb4-6389-4bdc-bd60-839f78aea8e1_large.mp4]]>
                       </MediaFile>
                       <InteractiveCreativeFile type="text/html" apiFramework="SIMID" variableDuration="true">
-                        <![CDATA[https://qa-media.truex.com/container/3.x/current/idvx-simid-placeholder.html#direct=true&campaign_id=10004&creative_id=8245&partner_config_hash=e5b97758c66fa13d0aa699058672719140333098&network_user_id=some-user-2]]>
+                        <![CDATA[https://qa-media.truex.com/container/3.x/current/idvx-simid.html#direct=true&campaign_id=10004&creative_id=9574&partner_config_hash=d66b670fcab1275e727882b49149ae132c7d0212&network_user_id=some-user-2&user_agent=Android]]>
                       </InteractiveCreativeFile>
                     </MediaFiles>
                   </Linear>
